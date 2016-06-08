@@ -48,6 +48,11 @@
   justify-content: center; 
 }
 
+.color {
+  height: 23px;
+  width: 30px;
+  display: block;margin: 0 10px;
+}
 
 
 
@@ -80,7 +85,7 @@ body {
 .splash .fa-spinner {
   text-align: center;
   display: inline-block;
-  font-size: 72px;
+  font-size: 42px;
   margin-top: 50px;
 }
 
