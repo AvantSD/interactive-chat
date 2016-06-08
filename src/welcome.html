@@ -1,0 +1,26 @@
+<template>
+  <section class="au-animate">
+    <h2>${heading}</h2>
+    <form role="form" submit.delegate="submit()">
+      
+      <div class="form-group">
+        <label for="fn">We can talk? tell me your name:</label>
+        <input type="text" value.bind="firstName" class="form-control" id="fn" placeholder="name">
+        <button type="submit" class="btn btn-default">OK</button>
+      </div>
+      
+      <p><b>Ok ${firstName}</b>, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, accusantium voluptatum illo eum dolor adipisci est excepturi, ipsa nisi laborum ducimus a reiciendis. In facere reprehenderit corporis unde exercitationem deserunt. <b> this is a test and you cam tell me your age?</b></p>
+
+      <div class="form-group age">
+        <input type="text" value.bind="ageUser" class="form-control" id="fn" placeholder="Age">
+        <button type="submit" class="btn btn-default">OK</button>
+      </div>
+
+      <p><b>${ageUser} anos</b>, grande futuro pela frente.</b></p>
+      <p><b>${ageUser} anos</b>, ah meus 20 e poucos anos...</b></p>
+      <p><b>${ageUser} anos</b>, certo, vamos lá!</b></p>
+
+      
+    </form>
+  </section>
+</template>
