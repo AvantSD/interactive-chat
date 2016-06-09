@@ -1,14 +1,31 @@
 <template>
+
+  <div class="type" repeat.for="todo of todos">
+    <input type="checkbox" checked.bind="todo.completed">
+    ${todo.text}
+    <a href="#" click.trigger="removeTodo(todo)">x</a>
+  </div>
+
+  <div class="form-inline">
+    <input type="text" value.bind="newTodoText" keyup.trigger="doneTyping($event)">
+    <button click.trigger="addTodo()">Add Todo</button>
+
+    <button if.bind="todos.length > 1" click.trigger="conpletedAll()">
+      complete all
+    </button>
+
+  </div>
+
   <section class="au-animate">
     <h2>${heading}</h2>
     <form role="form" submit.delegate="submit()">
-      
+
       <div class="form-group">
         <label for="fn">We can talk? tell me your name:</label>
         <input type="text" value.bind="nameUser & updateTrigger: 'blur':'paste'" class="form-control" id="fn" placeholder="name">
         <button type="submit" class="btn btn-default">OK</button>
       </div>
-      
+
       <p><b>Ok ${nameUser}</b>, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, accusantium voluptatum illo eum dolor adipisci est excepturi, ipsa nisi laborum ducimus a reiciendis. In facere reprehenderit corporis unde exercitationem deserunt. <b> this is a test and you cam tell me your age?</b></p>
 
       <div class="form-group age">
@@ -27,7 +44,7 @@
         <div class="color" style="background-color: rgb({$rgb.r}, {$rgb.g}, {$rgb.b});"></div> -->
       </div>
 
-      
     </form>
   </section>
+
 </template>
