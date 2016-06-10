@@ -4,6 +4,14 @@ export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging();
+    .defaultBindingLanguage()
+    .defaultResources()
+    .developmentLogging()
+    .router()
+    .history()
+    .eventAggregator()
+    .plugin('aurelia-animatorCSS')
+    .plugin('aurelia-animator-velocity')
 
   //Uncomment the line below to enable animation.
   //aurelia.use.plugin('aurelia-animator-css');

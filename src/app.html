@@ -1,28 +1,5 @@
 <template>
+    <require from="./converters"></require>
 
-    <!-- <require from="nav-bar.html"></require> -->
-    <nav-bar router.bind="router"></nav-bar>
-    <require from="interation/hello-world.html"></require>
-
-    <div class="page-host">
-        <router-view></router-view>
-    </div>
-
-    <hello-world first-name="Albert" last-name="Einstein"></hello-world>
-
-</template>
-
-
-<template bindable="name">
-
-    <require from="bootstrap/css/bootstrap.css"></require>
-    <require from="interation/yes-or-no.html"></require>
-    <require from="interation/say-goodbye.html"></require>
-
-    <p>What is your name? <input type="text" value.bind="name & debounce" /></p>
-
-    <yes-or-no question="Are you leaving?" answer.two-way="sayGoodbye"></yes-or-no>
-
-    <say-goodbye if.bind="sayGoodbye" name.bind="name"></say-goodbye>
-
+    <h2>${currentDate | dateFormat}</h2>
 </template>
